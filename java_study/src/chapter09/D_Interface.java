@@ -1,0 +1,74 @@
+package chapter09;
+
+/*
+ 	인터페이스 멤버 변수의 특성
+ 	: 자동으로 public static final 속성을 가짐
+ 	: 모든 멤버 변수는 인터페이스 상수로 동작
+ 	>> 어디서든 접근 가능 + 인스턴스화 없이 인터페이스명으로 접근 가능 + 값 변경 불가능
+ */
+interface Example1{
+	int EXAMPLE_VARIABLE= 10;
+	void printVar();
+	
+	static void method() {
+		System.out.println("예시1");
+	}
+}
+
+interface Example2{
+	void printVar2();
+	
+	static void method() {
+		System.out.println("예시2");
+	}
+}
+
+/*
+ 다중 인터페이스 구현
+ : 자바에스는 여러 개의 인터페이스를 동시에 구현이 가능
+ >> 둘 이상으 ㅣ타입으로 동작 가능
+ 
+ == 다중 인터페이스 구현 방법==
+ : implements 키워드 뒤에 여러 개의 인터페이스를 , 로 구분하여 나열
+ */
+
+class ExampleClass implements Example1, Example2{
+	public void printVar2() {
+		System.out.println("다중 인터페이스 구현");
+	}
+
+	public void printVar() {
+		System.out.println(EXAMPLE_VARIABLE);
+	}
+	/*
+	 	cf) 다중 인터페이스의 주의 사항
+	 	: 여러 개의 인터페이스에 같은 시그니처(선언부)를 가진 디폴트 메소드가 존재할 경우
+	 	>> 선언이 같고 구현이 다른 메소드가 충돌
+	 */
+	@Override
+	public void method() {
+		System.out.println("Method, 중복되는 디폴트 메소드");
+	}
+}
+
+public class D_Interface {
+	public static void main(String[] args) {
+		ExampleClass exClass= new ExampleClass();
+		exClass.printVar();
+		exClass.printVar2();
+		exClass.method();
+		
+		Example1 exInterface= exClass;
+		exInterface.printVar();
+		//exInterface.printVar2();
+		exInterface.method();
+		
+		/*
+		 cf) 인터페이스의 다형성
+		 : 인터페이스를 구현한 클래스의 객체는 해당 인터페이스 타입이 될 수 있음
+		 >> 해당 인터페이스 내의 구조만을 가지며
+		 >> 재정의 된 메소드는 유지
+		 */
+	}
+
+}

@@ -1,0 +1,33 @@
+package chapter05;
+class BaseballPlay{
+	String name;
+	double battingAverage;
+	int homeRuns;
+	public BaseballPlay(String name, double battingAverage, int homeRuns) {
+		super();
+		this.name = name;
+		this.battingAverage = battingAverage;
+		this.homeRuns = homeRuns;
+		playerCount++;
+	}
+	
+	
+	static int playerCount= 0;
+	
+	public void newBattingAverage(double a){
+		this.battingAverage= a;
+	}
+	public void newHomeRuns(int b) {
+		this.homeRuns=b;
+	}
+}
+public class BaseballPlayer {
+	public static void main(String[] args) {
+		BaseballPlay aa= new BaseballPlay("aa", 0.7, 2);
+		BaseballPlay bb= new BaseballPlay("bb", 0.8, 3);
+		BaseballPlay cc= new BaseballPlay("cc", 0.5, 4);
+		
+		System.out.println(BaseballPlay.playerCount);
+	}
+
+}

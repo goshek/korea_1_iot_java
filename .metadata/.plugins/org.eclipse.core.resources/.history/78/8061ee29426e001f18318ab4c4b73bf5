@@ -1,0 +1,25 @@
+package chapter08;
+
+/*
+ 	== 자바에서의 타입 변환 ==
+ 	
+ */
+class Parent{
+	void displayInfo() {
+		System.out.println("부모입니다.");
+	}
+}
+class Child extends Parent{
+	@Override
+	void displayInfo() {
+		System.out.println("자식입니다.");
+	}
+}
+public class A_Class_Type {
+
+	public static void main(String[] args) {
+		Parent childObject= new Child();
+		childObject.displayInfo();
+	}
+
+}

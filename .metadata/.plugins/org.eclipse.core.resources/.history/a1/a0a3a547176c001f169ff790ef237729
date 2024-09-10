@@ -1,0 +1,17 @@
+package other;
+
+public class ParentClass {
+	public String publicField;
+	protected String protectedField;
+	ParentClass(){
+		this.protectedField= "hello";
+	}
+	void exampleMethod() {
+		System.out.println("hi");
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="chapter05.BaseballPlay"/>
+    <fullyQualifiedTypeName name="other.ParentClass"/>
+    <fullyQualifiedTypeName name="chapter07.A_Modifier"/>
+    <fullyQualifiedTypeName name="chapter07.Example"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="chapter12.controller.BookController"/>
+    <fullyQualifiedTypeName name="chapter12.view.BookView"/>
+    <fullyQualifiedTypeName name="chapter12.main"/>
+</qualifiedTypeNameHistroy>

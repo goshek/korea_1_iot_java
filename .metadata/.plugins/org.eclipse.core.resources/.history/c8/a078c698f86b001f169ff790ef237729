@@ -1,0 +1,28 @@
+package chapter06;
+class Car{
+	String color;
+	String gearType;
+	int door;
+	Car(String color, String gearType, int door) {
+		this.color = color;
+		this.gearType = gearType;
+		this.door = door;
+	}
+
+	Car(String color){
+		this(color,"auto",4);
+		door= 5;
+	}
+	// >> 객체 생성 시 색상만 작성하는 경우
+	// >> 색상 +auto+ 문의 개수 5
+	void displayInfo() {
+		System.out.println(color +gearType+ door);
+	}
+}
+public class Constructor {
+	public static void main(String[] args) {
+		Car c= new Car("white");
+		c.displayInfo();
+	}
+
+}
